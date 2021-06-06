@@ -191,7 +191,7 @@ def save_uni_keywords_to_db(kw_list, uni, u_cluster):
     global connection
 
     cursor = connection.cursor()
-    add_uni = ("INSERT INTO university "
+    add_uni = ("INSERT INTO UNIVERSITY "
                "(name, cluster) "
                "VALUES (%s, %s)")
 
@@ -202,7 +202,7 @@ def save_uni_keywords_to_db(kw_list, uni, u_cluster):
 
     uni_id = cursor.lastrowid
 
-    add_keyword = ("INSERT INTO keyword "
+    add_keyword = ("INSERT INTO KEYWORD "
                    "(keyword, university_id) "
                    "VALUES (%s, %s)")
 
