@@ -17,12 +17,17 @@ $ docker exec -i mysql_db mysql -uuser -ppassword graduate < graduate.sql
 $ xhost +local:docker
 $ export DISPLAY=$DISPLAY
 ```
-4 - Run the project
+4 - Run the docker
 ```
 $ docker run -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix python
+```
+5- Exec the python3 container
+```
 $ docker-compose exec python3 bash
+```
+6- Run the project
+```
 $ python3 app.py
-
 ```
 
 
