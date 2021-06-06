@@ -325,7 +325,7 @@ def save_requirements_to_db(requirements_list):
     print(requirements_list)
     global connection
     cursor = connection.cursor()
-    update_grade = ("UPDATE requirements SET "
+    update_grade = ("UPDATE REQUIREMENTS SET "
                     "ALES_MIN=%s, GRE_MIN=%s, YDS_MIN=%s, IELTS_OVERALL_MIN=%s,"
                     "IELTS_WRITE_MIN=%s, TOEFL_OVERALL_MIN=%s, TOEFL_WRITE_MIN=%s WHERE ID=1")
     grade_data = tuple(requirements_list)
@@ -576,10 +576,10 @@ connection = mysql.connector.connect(host='localhost',
 
 keywords_sql = "SELECT K.KEYWORD, U.NAME, U.CLUSTER FROM UNIVERSITY U, KEYWORD K WHERE K.UNIVERSITY_ID= U.id"
 
-grade_sql = "SELECT GRADE, MIN_GPA, MAX_GPA FROM grade_cluster"
+grade_sql = "SELECT GRADE, MIN_GPA, MAX_GPA FROM GRADE_CLUSTER"
 
 requirements_sql = "SELECT ALES_MIN, GRE_MIN, YDS_MIN, IELTS_OVERALL_MIN, IELTS_WRITE_MIN, " \
-                   "TOEFL_OVERALL_MIN, TOEFL_WRITE_MIN FROM requirements"
+                   "TOEFL_OVERALL_MIN, TOEFL_WRITE_MIN FROM REQUIREMENTS"
 
 keyword_df = pd.read_sql(keywords_sql, connection)
 
