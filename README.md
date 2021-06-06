@@ -9,7 +9,7 @@ $ docker-compose up --build -d
 
 2 - Restore the graduate database
 ```
-docker exec -i mysql_db mysql -uuser -ppassword graduate < graduate.sql
+$ docker exec -i mysql_db mysql -uuser -ppassword graduate < graduate.sql
 ```
 
 3 - Give permission for GUI Display
