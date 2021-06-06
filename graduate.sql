@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `grade_cluster`
+-- Table structure for table `GRADE_CLUSTER`
 --
 
-DROP TABLE IF EXISTS `grade_cluster`;
+DROP TABLE IF EXISTS `GRADE_CLUSTER`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `grade_cluster` (
+CREATE TABLE `GRADE_CLUSTER` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `GRADE` varchar(45) DEFAULT NULL,
   `MAX_GPA` double DEFAULT NULL,
@@ -32,13 +32,13 @@ CREATE TABLE `grade_cluster` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `grade_cluster`
+-- Dumping data for table `GRADE_CLUSTER`
 --
 
-LOCK TABLES `grade_cluster` WRITE;
-/*!40000 ALTER TABLE `grade_cluster` DISABLE KEYS */;
-INSERT INTO `grade_cluster` VALUES (1,'A*',0,0),(2,'A',4,3.5),(3,'B',0,0),(4,'C',3.4,2.5),(5,'D',0,0);
-/*!40000 ALTER TABLE `grade_cluster` ENABLE KEYS */;
+LOCK TABLES `GRADE_CLUSTER` WRITE;
+/*!40000 ALTER TABLE `GRADE_CLUSTER` DISABLE KEYS */;
+INSERT INTO `GRADE_CLUSTER` VALUES (1,'A*',0,0),(2,'A',4,3.5),(3,'B',0,0),(4,'C',3.4,2.5),(5,'D',0,0);
+/*!40000 ALTER TABLE `GRADE_CLUSTER` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
