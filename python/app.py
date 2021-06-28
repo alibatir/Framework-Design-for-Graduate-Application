@@ -99,7 +99,6 @@ def skip():
 
 
 def restart_app():
-    print("deneme")
     top.destroy
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -556,11 +555,17 @@ def grade_clusters():
 
 ############################################################################################
 # DB connection § create data frame consist of keywords &
-
-
+''' Docker mysql_db
 connection = pymysql.connect(host='mysql_db',
                              user='user',
                              password='password',
+                             db='graduate',
+                             charset='utf8mb4',
+                             cursorclass=pymysql.cursors.DictCursor)
+ '''
+connection = pymysql.connect(host='localhost',
+                             user='root',
+                             password='1234',
                              db='graduate',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
